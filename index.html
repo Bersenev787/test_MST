@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Test</title>
+  </head>
+  <body>
+    <header class="header container">
+      <div class="header_content">
+        <a class="header_content_logo" href="index.html">
+          <img
+            class="header_content_logo_img"
+            src="img/logo_2.svg"
+            alt="logo"
+          />
+        </a>
+        <nav class="header_content_nav">
+          <a class="header_content_nav_link" href="#order">flight!</a>
+          <a class="header_content_nav_link" href="#order">about Us</a>
+          <a class="header_content_nav_link" href="#order">prices</a>
+          <a class="header_content_nav_link" href="#order">takeoff</a>
+        </nav>
+      </div>
+    </header>
+    <section class="main container">
+      <div class="main_content">
+        <h1 class="main_content_title">
+          <span>Welcome</span> aboard and have a nice
+          <span>flight!</span>
+        </h1>
+        <div class="main_content_text">
+          <p class="main_content_text_top">
+            <b>Discover the whole world!</b>
+          </p>
+          <ul class="main_content_text_list">
+            <li>Any destination</li>
+            <li>Impeccable service on board</li>
+            <li>Complete confidentiality of your movements</li>
+          </ul>
+        </div>
+        <div class="main_content_btn">
+          <button class="main_content_btn_item">Order</button>
+          <button class="main_content_btn_item">Details</button>
+        </div>
+      </div>
+    </section>
+    <section class="order container" id="order">
+      <h2 class="order_title">place an<span> order</span></h2>
+      <p class="order_text">
+        Before filling out the form, please read the instructions!
+      </p>
+      <div class="order_scheme">
+        <div class="order_scheme_item">
+          <img src="img/plane_1.svg" alt="icon" />
+          <p>Select aircraft</p>
+        </div>
+        <div class="order_scheme_item">
+          <img src="img/plane_4.svg" alt="icon" />
+          <p>Please specify departure airport</p>
+        </div>
+        <div class="order_scheme_item">
+          <img src="img/plane_3.svg" alt="icon" />
+          <p>And the arrival airport</p>
+        </div>
+        <div class="order_scheme_item">
+          <img src="img/plane_4.svg" alt="icon" />
+          <p>Specify the date</p>
+        </div>
+        <div class="order_scheme_item">
+          <img src="img/plane_5.svg" alt="icon" />
+          <p>Don't forget to fasten your seat belt!</p>
+        </div>
+      </div>
+      <div class="order_form">
+        <select class="order_form_select" name="#">
+          <option value="">Aircraft Type</option>
+          <option value="">Boeing</option>
+          <option value="">Airbus</option>
+          <option value="">Cessna</option>
+        </select>
+        <input
+          class="order_form_input"
+          name="user_email"
+          type="email"
+          placeholder="E-mail"
+        />
+        <input
+          class="order_form_input"
+          name="user_name"
+          type="text"
+          placeholder="Your Name"
+        />
+      </div>
+      <div class="order_slider">
+        <div class="order_slider_item">
+          <div class="order_slider_item_label">
+            <label for="slider">How much fuel should I fill up with?!</label>
+            <span id="sliderValue">75%</span>
+          </div>
+          <input
+            type="range"
+            id="slider"
+            min="0"
+            max="100"
+            value="75"
+            oninput="updateValue(this.value)"
+          />
+        </div>
+        <button class="order_slider_btn">
+          <img src="img/item_1.svg" alt="logo" /> Photo of document
+        </button>
+      </div>
+      <div class="order_send">
+        <button class="order_send_btn">Take off!</button>
+      </div>
+    </section>
+    <section class="feedback container">
+      <h2 class="feedback_title">Passenger reviews</h2>
+      <div class="feedback_content">
+        <img
+          class="feedback_content_img"
+          src="img/plane_4.svg"
+          alt="airplane"
+        />
+        <div class="feedback_content_testimonials">
+          <div class="feedback_content_testimonials_blok" id="feedback">
+            <img
+              id="feedback_content_testimonials_blok_img"
+              src="client1.jpg"
+              alt="Фото клиента"
+            />
+            <h3 id="feedback_content_testimonials_blok_name">Paul Kellerman</h3>
+            <p id="feedback_content_testimonials_blok_text">
+              Excellent service! Everything is fast and high quality.
+            </p>
+          </div>
+          <div class="feedback_content_testimonials_btn">
+            <button onclick="prevTestimonial()">Back</button>
+            <button onclick="nextTestimonial()">Next</button>
+          </div>
+        </div>
+        <img
+          class="feedback_content_img"
+          src="img/plane_4.svg"
+          alt="airplane"
+        />
+      </div>
+    </section>
+    <footer class="footer container">
+      <div class="footer_content">
+        <p class="footer_content_text">
+          © 2018 «JET.NET» All rights reserved..
+        </p>
+        <div class="footer_content_pay">
+          <div class="footer_content_pay_item">
+            <img src="img/qiwi.svg" alt="qiwi" />
+            <p class="footer_content_pay_item_text">QIWI wallet</p>
+          </div>
+          <div class="footer_content_pay_item">
+            <img src="img/ya.svg" alt="yandex" />
+            <p class="footer_content_pay_item_text">Yandex Money</p>
+          </div>
+          <div class="footer_content_pay_item">
+            <img src="img/wm.svg" alt="wm" />
+            <p class="footer_content_pay_item_text">Web Money</p>
+          </div>
+        </div>
+        <div class="footer_content_contact">
+          <div class="footer_content_contact_item">
+            <img src="img/mail.svg" alt="mail" />
+            <a
+              class="footer_content_contact_item_link"
+              href="mailto:info@jet.com"
+              >info@jet.com</a
+            >
+          </div>
+          <div class="footer_content_contact_item">
+            <img src="img/vk.svg" alt="#" />
+            <a class="footer_content_contact_item_link" href="https://x.com/"
+              >We are on VK</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
